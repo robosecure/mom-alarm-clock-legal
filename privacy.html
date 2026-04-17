@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mom Alarm Clock — Privacy Policy</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.65; background: #fafafa; }
+h1 { font-size: 32px; border-bottom: 2px solid #FF6B8A; padding-bottom: 12px; }
+h2 { font-size: 22px; margin-top: 36px; color: #333; }
+h3 { font-size: 17px; margin-top: 22px; color: #555; }
+ul { padding-left: 24px; }
+li { margin: 6px 0; }
+a { color: #FF6B8A; }
+p { margin: 12px 0; }
+strong { color: #111; }
+.meta { color: #888; font-size: 14px; margin-bottom: 24px; }
+.back { display: inline-block; margin-bottom: 20px; font-size: 14px; color: #666; text-decoration: none; }
+.back:hover { color: #FF6B8A; }
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back">&larr; Back to home</a>
+
+<h1>Privacy Policy</h1>
+<p class="meta"><strong>Last updated:</strong> April 17, 2026</p>
+
+<p>Mom Alarm Clock ("the App") is a family alarm and morning routine app designed to help guardians and children (ages 5-18) build healthy wake-up habits. This policy explains what data we collect, why, and how we protect it.</p>
+
+<h2>Who We Are</h2>
+<p>Mom Alarm Clock is developed and operated by Ross Mathews. For questions about this policy, contact us at <a href="mailto:rmathews0707@gmail.com">rmathews0707@gmail.com</a>.</p>
+
+<h2>Data We Collect</h2>
+
+<h3>Guardian Account Data</h3>
+<ul>
+  <li><strong>Email address</strong> — Used for sign-in and account recovery. Stored in Firebase Authentication.</li>
+  <li><strong>Display name</strong> — Shown in the app to identify the guardian. Stored in Firestore.</li>
+  <li><strong>Parent PIN</strong> — A 4-6 digit PIN for protected actions. Stored locally in the device Keychain as a salted SHA-256 hash. Never transmitted to our servers.</li>
+</ul>
+
+<h3>Child Profile Data</h3>
+<ul>
+  <li><strong>Child's name</strong> — Display name set by the guardian. Stored in Firestore.</li>
+  <li><strong>Child's age</strong> — Used to tailor verification difficulty and wording to the child's age group (5-7, 8-10, 11-13, 14+). We store the numeric age, not date of birth. Stored in Firestore.</li>
+</ul>
+
+<h3>Alarm and Session Data</h3>
+<ul>
+  <li><strong>Alarm schedules</strong> — Wake-up times, active days, verification settings. Stored in Firestore and locally on-device.</li>
+  <li><strong>Morning sessions</strong> — Records of each alarm event: when it fired, verification method used, whether it was approved, points earned. Stored in Firestore.</li>
+  <li><strong>Verification results</strong> — Method used (quiz, motion, photo, QR, geofence), completion timestamp, and proof metadata (step count, quiz score, GPS distance). No photo content is stored on our servers for quiz or motion verification.</li>
+</ul>
+
+<h3>Audio Data</h3>
+<ul>
+  <li><strong>Voice alarm recordings</strong> — Guardians may optionally record a personal wake-up message. These audio files are stored in Firebase Storage, scoped to the family, and accessible only by family members. Maximum 5 MB per clip.</li>
+</ul>
+
+<h3>Location Data</h3>
+<ul>
+  <li><strong>Coarse location</strong> — Used only during geofence verification to confirm the child reached a designated wake-up spot. Location is checked once, compared against the target, and the result (distance in meters) is stored — not the raw coordinates. Location is never used for tracking or advertising.</li>
+</ul>
+
+<h3>Photo Data</h3>
+<ul>
+  <li><strong>Verification photos</strong> — If photo verification is enabled, the child may submit a photo to prove they are awake. Photos are reviewed by the guardian and are not stored permanently on our servers. Photos are never used for facial recognition, advertising, or any purpose beyond verification.</li>
+</ul>
+
+<h3>Device and Diagnostic Data</h3>
+<ul>
+  <li><strong>Crash reports</strong> — Collected by Firebase Crashlytics to identify and fix bugs. Contains no personally identifiable information.</li>
+  <li><strong>Device identifiers</strong> — Firebase anonymous authentication generates a device-scoped identifier for child devices. This is used only for authentication, not for tracking or advertising.</li>
+  <li><strong>Push notification tokens</strong> — Used to deliver alarm notifications and guardian alerts. Tokens are stored in Firestore and rotated by the operating system.</li>
+  <li><strong>App diagnostics</strong> — The app collects non-identifying operational data (alarm fired count, verification method used, queue length) for support purposes. This data contains no names, messages, or personal content.</li>
+</ul>
+
+<h2>Data We Do NOT Collect</h2>
+<ul>
+  <li>Date of birth (we use age only, grouped into age bands)</li>
+  <li>Precise GPS coordinates (only distance-to-target for geofence)</li>
+  <li>Browsing history</li>
+  <li>Contacts or call logs</li>
+  <li>Financial information</li>
+  <li>Advertising identifiers</li>
+  <li>Data from other apps on the device</li>
+</ul>
+
+<h2>Children's Privacy (COPPA Compliance)</h2>
+<p>Mom Alarm Clock is designed for use by families where a guardian manages the experience for children ages 5-18.</p>
+<ul>
+  <li><strong>Parental consent:</strong> A guardian must create an account and explicitly add each child. Children cannot create accounts independently.</li>
+  <li><strong>Child pairing:</strong> Children join the family using a time-limited code generated by the guardian. By entering this code, the guardian consents to the collection of the child's data as described in this policy.</li>
+  <li><strong>Minimal collection:</strong> We collect only the child's name and age from the guardian. The child's device collects verification data (steps, quiz answers, location check) only during active alarm verification.</li>
+  <li><strong>No advertising:</strong> We do not serve ads to children or use children's data for advertising.</li>
+  <li><strong>No social features:</strong> Children cannot communicate with anyone other than their guardian through the app.</li>
+  <li><strong>Guardian control:</strong> Guardians can view, modify, and delete all child data. Deleting the guardian account deletes all family data including all child profiles.</li>
+</ul>
+
+<h2>How We Use Data</h2>
+<p>All data is used exclusively for app functionality:</p>
+<ul>
+  <li>Delivering alarms and verification challenges</li>
+  <li>Calculating streaks, points, and rewards</li>
+  <li>Sending push notifications to guardians about verification status</li>
+  <li>Tailoring quiz difficulty and wording based on the child's age group</li>
+  <li>Detecting and reporting tampering (e.g., device volume changes, permission revocation)</li>
+  <li>Providing diagnostic information for support</li>
+</ul>
+<p>We do not use any collected data for advertising, marketing, profiling, or sale to third parties.</p>
+
+<h2>Data Storage and Security</h2>
+<ul>
+  <li><strong>Firebase:</strong> Account data, family data, and session data are stored in Google Firebase (Firestore, Authentication, Storage) with encryption in transit (TLS) and at rest.</li>
+  <li><strong>On-device:</strong> Local data is stored in the app's sandboxed Documents directory with iOS File Protection (encrypted at rest, inaccessible when device is locked).</li>
+  <li><strong>Keychain:</strong> Parent PIN is stored in the iOS Keychain with hardware-backed encryption.</li>
+  <li><strong>App Check:</strong> Firebase App Check with App Attest verifies that requests come from legitimate app installations.</li>
+  <li><strong>Access control:</strong> Firestore security rules enforce family isolation — users can only access data within their own family. Children can only update their own session data. Server-managed fields (rewards, review windows) cannot be modified by any client.</li>
+</ul>
+
+<h2>Data Retention</h2>
+<ul>
+  <li><strong>Active accounts:</strong> Data is retained while the account is active.</li>
+  <li><strong>Session history:</strong> Limited to the most recent 500 sessions per child (older sessions are automatically deleted by a Cloud Function).</li>
+  <li><strong>Tamper events:</strong> Limited to the most recent 2,000 events per child.</li>
+  <li><strong>Account deletion:</strong> Deleting the guardian account permanently deletes all family data: child profiles, sessions, tamper events, voice recordings, push logs, and join codes. This action is irreversible.</li>
+</ul>
+
+<h2>Data Sharing</h2>
+<p>We do not sell, rent, or share personal data with third parties. Data is processed by:</p>
+<ul>
+  <li><strong>Google Firebase</strong> — Cloud infrastructure provider</li>
+  <li><strong>Apple Push Notification service (APNs)</strong> — For delivering push notifications</li>
+</ul>
+
+<h2>Your Rights</h2>
+<ul>
+  <li><strong>Access:</strong> View all your data within the app (Settings, History, Diagnostics).</li>
+  <li><strong>Correction:</strong> Edit child profiles and alarm settings at any time.</li>
+  <li><strong>Deletion:</strong> Delete your account and all associated data from Settings &gt; Delete Account.</li>
+  <li><strong>Data portability:</strong> Contact us to request an export of your data.</li>
+</ul>
+
+<h2>Changes to This Policy</h2>
+<p>We may update this policy as the app evolves. Material changes will be communicated through the app or via email. Continued use of the app after changes constitutes acceptance.</p>
+
+<h2>Contact</h2>
+<p>For privacy questions, data requests, or concerns:</p>
+<ul>
+  <li>Email: <a href="mailto:rmathews0707@gmail.com">rmathews0707@gmail.com</a></li>
+</ul>
+
+<p style="margin-top: 60px; color: #888; font-size: 13px; text-align: center;">&copy; 2026 Ross Mathews. All rights reserved.</p>
+
+</body>
+</html>
