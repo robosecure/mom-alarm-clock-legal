@@ -78,7 +78,7 @@
 
 <h3>Photo Data</h3>
 <ul>
-  <li><strong>None.</strong> v1.0 does not request camera or photo-library access. The photo verification method is scoped out of this release.</li>
+  <li><strong>Camera</strong> — Requested on the child&rsquo;s device for two optional features: scanning a family QR code to join, and the QR or photograph wake checks. A photograph taken for a wake check is classified on the device by Apple&rsquo;s Vision framework and then discarded — never uploaded, never saved, never shown to the guardian; only whether the requested object was recognised is recorded. The app does not request photo-library access.</li>
 </ul>
 
 <h3>Device and Diagnostic Data</h3>
@@ -94,7 +94,7 @@
 <ul>
   <li>Date of birth (we use age only, grouped into age bands)</li>
   <li>Any location data — coarse, precise, or distance-only (geofence verification scoped out of v1.0)</li>
-  <li>Any photo or camera data (photo verification scoped out of v1.0)</li>
+  <li>Photographs. A wake-check photo is classified on the device and discarded; no image is uploaded or stored</li>
   <li>Step counts or motion data (motion verification scoped out of v1.0)</li>
   <li>Browsing history</li>
   <li>Contacts or call logs</li>
