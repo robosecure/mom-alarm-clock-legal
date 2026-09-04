@@ -29,7 +29,7 @@
 <body>
 
 <h1>Mom Alarm Clock — Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> August 5, 2026</p>
+<p class="meta"><strong>Last updated:</strong> September 4, 2026</p>
 
 <p>Mom Alarm Clock is a family alarm and morning routine app designed for guardians and children (ages 5–18). This policy covers the Mom Alarm Clock mobile app (&ldquo;the App&rdquo;), our website, and email update or waitlist forms that link to this policy. It explains what data we collect, why, and how we protect it.</p>
 
@@ -59,8 +59,8 @@
 
 <h3>Audio Data</h3>
 <ul>
-  <li><strong>Voice alarm recordings</strong> — Guardians may optionally record a personal wake-up message attached to an alarm. Stored in Firebase Storage, scoped to the family, accessible only by family members.</li>
-  <li><strong>Voice messages</strong> — Guardians and children may optionally send each other short voice messages (up to 30 seconds, ~120&nbsp;KB). They are stored in Firebase Storage scoped to the family, encrypted in transit (TLS) and at rest, accessible only by family members, and deleted when the recipient dismisses them.</li>
+  <li><strong>Voice alarm recordings</strong> — Guardians may optionally record a personal wake-up message attached to an alarm. The audio is stored in our Firestore database, scoped to the family, encrypted in transit (TLS) and at rest, and readable only by members of that family. We do not use Firebase Storage.</li>
+  <li><strong>Voice messages</strong> — Guardians and children may optionally send each other short voice messages (up to 30 seconds, ~120&nbsp;KB). They are stored in our Firestore database, scoped to the family, encrypted in transit (TLS) and at rest, readable only by members of that family, and deleted when the recipient dismisses them. We do not use Firebase Storage.</li>
 </ul>
 
 <h3>Website, Waitlist, and Email Data</h3>
