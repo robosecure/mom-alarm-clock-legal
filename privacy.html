@@ -29,9 +29,9 @@
 <body>
 
 <h1>Mom Alarm Clock — Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> September 4, 2026</p>
+<p class="meta"><strong>Last updated:</strong> September 28, 2026</p>
 
-<p>Mom Alarm Clock is a family alarm and morning routine app designed for guardians and children (ages 5–18). This policy covers the Mom Alarm Clock mobile app (&ldquo;the App&rdquo;), our website, and email update or waitlist forms that link to this policy. It explains what data we collect, why, and how we protect it.</p>
+<p>Mom Alarm Clock is a family alarm and morning routine app designed for guardians (a parent or legal guardian) and children (ages 5–18). This policy covers the Mom Alarm Clock mobile app (&ldquo;the App&rdquo;), our website, and email update or waitlist forms that link to this policy. It explains what data we collect, why, and how we protect it.</p>
 
 <h2>Who We Are</h2>
 <p>Mom Alarm Clock is developed and operated by VARR Stack Technologies LLC. For questions about this policy, contact us at <a href="mailto:momalarmclock@gmail.com">momalarmclock@gmail.com</a>.</p>
@@ -41,7 +41,7 @@
 <h3>Guardian Account Data</h3>
 <ul>
   <li><strong>Email address</strong> — On iPhone and iPad, a guardian may create an account with an email address and password, used for sign-in and account recovery, stored in Firebase Authentication. The Android app currently signs in anonymously and collects no email address.</li>
-  <li><strong>Display name</strong> — Shown in the app to identify the guardian. Stored in Firestore.</li>
+  <li><strong>Display name</strong> — In the original iPhone app, shown in the app to identify the guardian. Stored in Firestore.</li>
 </ul>
 
 <h3>Child Profile Data</h3>
@@ -59,8 +59,8 @@
 
 <h3>Audio Data</h3>
 <ul>
-  <li><strong>Voice alarm recordings</strong> — Guardians may optionally record a personal wake-up message attached to an alarm. The audio is stored in our Firestore database, scoped to the family, encrypted in transit (TLS) and at rest, and readable only by members of that family. We do not use Firebase Storage.</li>
-  <li><strong>Voice messages</strong> — Guardians and children may optionally send each other short voice messages (up to 30 seconds, ~120&nbsp;KB). They are stored in our Firestore database, scoped to the family, encrypted in transit (TLS) and at rest, readable only by members of that family, and deleted when the recipient dismisses them. We do not use Firebase Storage.</li>
+  <li><strong>Voice alarm recordings</strong> — Guardians may optionally record a personal wake-up message attached to an alarm. The Android app cannot record them yet. The audio is stored in our Firestore database (or Firebase Storage in the original iPhone app), scoped to the family, encrypted in transit (TLS) and at rest, and readable only by members of that family.</li>
+  <li><strong>Voice messages</strong> — On iPhone and iPad, guardians and children may optionally send each other short voice messages (up to 30 seconds, ~120&nbsp;KB); the Android app cannot record them yet. They are stored in our Firestore database (or Firebase Storage in the original iPhone app), scoped to the family, encrypted in transit (TLS) and at rest, readable only by members of that family, and deleted when the recipient dismisses them.</li>
 </ul>
 
 <h3>Website, Waitlist, and Email Data</h3>
@@ -78,16 +78,16 @@
 
 <h3>Photo Data</h3>
 <ul>
-  <li><strong>Camera</strong> — Requested on the child&rsquo;s device for two optional features: scanning a family QR code to join, and the QR or photograph wake checks. A photograph taken for a wake check is classified on the device by Apple&rsquo;s Vision framework and then discarded — never uploaded, never saved, never shown to the guardian; only whether the requested object was recognised is recorded. The app does not request photo-library access.</li>
+  <li><strong>Camera</strong> — In the new iPhone and iPad app and the Android app, requested on the child&rsquo;s device for two optional features: scanning a family QR code to join, and the QR wake check; in the new iPhone and iPad app, also the photograph wake check (the Android app does not offer a photograph wake check). The original iPhone app does not use the camera. A photograph taken for a wake check is classified on the device by Apple&rsquo;s Vision framework and then discarded — never uploaded, never saved, never shown to the guardian; only whether the requested object was recognised is recorded. The app does not request photo-library access.</li>
 </ul>
 
 <h3>Device and Diagnostic Data</h3>
 <ul>
-  <li><strong>Crash reports</strong> — Collected by Firebase Crashlytics to identify and fix bugs. Reports may include technical device, app-version, performance, and crash-context data.</li>
-  <li><strong>Device and account identifiers</strong> — Firebase Authentication and other Firebase services generate identifiers used for authentication, app functionality, diagnostics, and analytics. They are not used for cross-app advertising.</li>
+  <li><strong>Crash reports</strong> — The original iPhone app and the Android app use Firebase Crashlytics to collect crash reports so we can identify and fix bugs. Reports may include technical device, app-version, performance, and crash-context data.</li>
+  <li><strong>Device and account identifiers</strong> — Firebase Authentication and other Firebase services generate identifiers (on Android, the anonymous sign-in identifier is the only account identifier) used for authentication, app functionality, diagnostics, and analytics. They are not used for cross-app advertising.</li>
   <li><strong>Push notification tokens</strong> — Used to deliver alarm notifications and guardian alerts. Tokens are stored in Firestore and rotated by the operating system.</li>
-  <li><strong>Usage analytics</strong> — We record product-interaction events such as pairing success, alarm firing, wake-check method and difficulty, and whether a wake check passed. These are written to our own database; we do not send them to an advertising network. Some are associated with your family identifier, so we can tell for example whether a family finished pairing — our App Store and Google Play privacy disclosures therefore treat product-interaction data as linked to you. Others are recorded with no family or account identifier at all. The iPhone and iPad app does not include the Firebase Analytics SDK. The Android app currently does, which means Google receives app and device identifiers from that version; we disclose that separately for that platform. The App does not show ads, does not use an advertising identifier, and does not use this data to track you across other companies&rsquo; apps or websites.</li>
-  <li><strong>Optional feedback diagnostics</strong> — When you submit in-app feedback, you may choose to include your device model and iOS version to help us reproduce issues. This is only sent if you leave the &ldquo;include device info&rdquo; option checked; it is never collected otherwise.</li>
+  <li><strong>Usage analytics</strong> — We record product-interaction events such as pairing success, alarm firing, wake-check method and difficulty, and whether a wake check passed. We do not send them to an advertising network. Some are associated with your family identifier, so we can tell for example whether a family finished pairing — our App Store and Google Play privacy disclosures therefore treat product-interaction data as linked to you. Others are recorded with no family or account identifier at all. The original iPhone app and the Android app include the Firebase Analytics SDK, so Google receives app and device identifiers from them; the new iPhone and iPad app does not. The App does not show ads, does not use an advertising identifier, and does not use this data to track you across other companies&rsquo; apps or websites.</li>
+  <li><strong>Optional feedback diagnostics</strong> — In the original iPhone app, when you submit in-app feedback, you may choose to include your device model and operating-system version to help us reproduce issues. This is only sent if you leave the &ldquo;Include device + build info&rdquo; option on; it is never collected otherwise.</li>
 </ul>
 
 <h2>Data the App Does NOT Collect</h2>
@@ -95,7 +95,7 @@
   <li>Date of birth (we use age only, grouped into age bands)</li>
   <li>Any location data — coarse, precise, or distance-only (geofence verification scoped out of v1.0)</li>
   <li>Photographs. A wake-check photo is classified on the device and discarded; no image is uploaded or stored</li>
-  <li>Step counts or motion data (motion verification scoped out of v1.0)</li>
+  <li>Step counts or motion data. The new iPhone and iPad app and the Android app read the motion sensor only during the shake wake game, on the device; the readings are not stored or sent.</li>
   <li>Browsing history</li>
   <li>Contacts or call logs</li>
   <li>Financial information</li>
@@ -111,7 +111,7 @@
   <li><strong>Minimal collection:</strong> We collect only the child's name and age from the guardian. During an active alarm check, the child's device collects the responses and result needed for the selected math, picture-identification, or pattern quiz.</li>
   <li><strong>No advertising:</strong> We do not serve ads to children or use children's data for advertising.</li>
   <li><strong>No social features:</strong> Children cannot communicate with anyone other than their guardian through the app.</li>
-  <li><strong>Guardian control:</strong> Guardians can view, modify, and delete all child data. Deleting the guardian account deletes all family data including all child profiles.</li>
+  <li><strong>Guardian control:</strong> Guardians can view and modify all child data, and can request deletion of all child data (see Your Rights). Deleting the guardian account deletes all family data including all child profiles.</li>
 </ul>
 
 <h2>How We Use Data</h2>
@@ -128,24 +128,24 @@
 
 <h2>Data Storage and Security</h2>
 <ul>
-  <li><strong>Firebase:</strong> Account data, family data, session data and voice recordings are stored in Google Firebase (Firestore and Authentication) with encryption in transit (TLS) and at rest. We do not use Firebase Storage.</li>
-  <li><strong>On-device:</strong> Local data is stored in the app's sandboxed Documents directory with iOS File Protection (encrypted at rest, inaccessible when device is locked).</li>
-  <li><strong>App Check:</strong> Firebase App Check with App Attest verifies that requests come from legitimate app installations.</li>
+  <li><strong>Firebase:</strong> Account data, family data, session data and voice recordings are stored in Google Firebase (Firestore and Authentication, and Firebase Storage for voice audio in the original iPhone app) with encryption in transit (TLS) and at rest.</li>
+  <li><strong>On-device:</strong> On iPhone and iPad, local data is kept in the app's private container and encrypted by iOS Data Protection. On Android, local app data is kept in the app's private storage, which other apps cannot read; it is encrypted when the device's storage encryption is on, which is standard on devices that shipped with Android 10 or later.</li>
+  <li><strong>App Check:</strong> In the original iPhone app, Firebase App Check with App Attest verifies that requests come from legitimate app installations.</li>
   <li><strong>Access control:</strong> Firestore security rules enforce family isolation — a person can only reach data inside their own family. A child&rsquo;s device can update its own morning and its own reports, and nothing else: the fields that decide whether and when a guardian is alerted are writable only by our servers and by a guardian, so a child&rsquo;s device cannot silence an alert about itself. Rules changes are checked against an automated test suite before they are deployed.</li>
   <li><strong>Our practices:</strong> Access to production data is limited to the operator of the service and protected by two-factor authentication. Data is backed up daily with a seven-day retention window, and the database supports point-in-time recovery over the same window. We review the app&rsquo;s data handling before each release. We do not sell data and we do not use it for advertising.</li>
-  <li><strong>Breach notification:</strong> If we become aware of a breach affecting personal data, we will notify affected guardians by email at the address on the account, and any regulator required by law, without undue delay.</li>
+  <li><strong>Breach notification:</strong> If we become aware of a breach affecting personal data, we will notify affected guardians by email where we have an address, and otherwise through the app, and any regulator required by law, without undue delay.</li>
 </ul>
 
 <h2>Data Retention</h2>
 <ul>
   <li><strong>Active accounts:</strong> Data is retained while the account is active.</li>
-  <li><strong>Session history:</strong> Limited to the most recent 500 sessions per child (older sessions are automatically deleted by a Cloud Function).</li>
-  <li><strong>Tamper events:</strong> Limited to the most recent 2,000 events per child.</li>
-  <li><strong>Account deletion:</strong> Deleting the guardian account permanently deletes all family data: child profiles, sessions, tamper events, voice recordings, push logs, and join codes. This action is irreversible.</li>
+  <li><strong>Session history:</strong> In the original iPhone app, limited to the most recent 500 sessions per child (older sessions are automatically deleted by a Cloud Function).</li>
+  <li><strong>Tamper events:</strong> In the original iPhone app, limited to the most recent 2,000 events per child.</li>
+  <li><strong>Account deletion:</strong> When an account is deleted (see Your Rights), all family data is permanently deleted: child profiles, sessions, tamper events, voice recordings, push logs, and join codes. This action is irreversible.</li>
   <li><strong>Email lists:</strong> Waitlist and product-update data are retained until you unsubscribe, the list is retired, or you request deletion, subject to limited records needed to document consent, suppression, security, or legal obligations.</li>
   <li><strong>Voice recordings:</strong> A wake-up message attached to an alarm is kept until the guardian replaces or removes it, or the alarm is deleted. A message recorded for one particular morning expires after that morning and is deleted automatically.</li>
-  <li><strong>Analytics events:</strong> Retained for no more than 24 months, and deleted with the family when an account is deleted.</li>
-  <li><strong>Diagnostics:</strong> Diagnostic reports you choose to send are retained for no more than 12 months.</li>
+  <li><strong>Analytics events:</strong> Analytics events linked to your family are deleted when the account is deleted. Google Analytics data collected by the original iPhone app and the Android app is not linked to your account and cannot be deleted per family; Google keeps event-level data for the retention period set in our Analytics property.</li>
+  <li><strong>Diagnostics:</strong> Feedback and diagnostic reports you choose to send are kept until you ask us to delete them; we do not yet delete them automatically.</li>
   <li><strong>Backups:</strong> Retained for seven days. Data deleted from the live database is removed from backups as those backups age out, within that window.</li>
   <li><strong>Children&rsquo;s data:</strong> We keep a child&rsquo;s data no longer than is reasonably necessary for the purpose it was collected for, and delete it when that purpose is fulfilled or the account is deleted.</li>
 </ul>
@@ -154,15 +154,16 @@
 <p>We do not sell, rent, or share personal data with third parties. Data is processed by:</p>
 <ul>
   <li><strong>Google Firebase</strong> — Cloud infrastructure provider (data processing agreement in place)</li>
-  <li><strong>Apple Push Notification service (APNs)</strong> — For delivering push notifications</li>
+  <li><strong>Apple Push Notification service (APNs)</strong> — For delivering push notifications on iPhone and iPad</li>
+  <li><strong>Firebase Cloud Messaging</strong> — For delivering push notifications on Android</li>
   <li><strong>Kit</strong> — Email form, confirmation, list-management, and product-update delivery provider for adults who choose to subscribe</li>
 </ul>
 
 <h2>Your Rights</h2>
 <ul>
-  <li><strong>Access:</strong> View all your data within the app (Settings, History, Diagnostics).</li>
+  <li><strong>Access:</strong> See your children, alarms and recent mornings in the app; the original iPhone app also has History and Diagnostics screens. Email us for a copy of anything else.</li>
   <li><strong>Correction:</strong> Edit child profiles and alarm settings at any time.</li>
-  <li><strong>Deletion:</strong> Delete your account and all associated data from Settings &gt; Delete Account.</li>
+  <li><strong>Deletion:</strong> If your app has Settings &gt; Delete Account, use it. If it does not (the current test versions on iPhone, iPad and Android), request deletion on <a href="delete-account.html">this page</a>.</li>
   <li><strong>Data portability:</strong> Contact us to request an export of your data.</li>
   <li><strong>Email choices:</strong> Unsubscribe using the link in an email or contact us to request access, correction, or deletion of waitlist and product-update data.</li>
 </ul>
