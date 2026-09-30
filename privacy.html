@@ -54,13 +54,13 @@
 <ul>
   <li><strong>Alarm schedules</strong> — Wake-up times, active days, verification settings. Stored in Firestore and locally on-device.</li>
   <li><strong>Morning sessions</strong> — Records of each alarm event: when it fired, verification method used, whether it was approved, points earned. Stored in Firestore.</li>
-  <li><strong>Wake-up quiz results</strong> — Quiz style (math, picture identification, or pattern), difficulty, completion/pass status, timestamps, and responses needed to run and evaluate the check. No photos, location, step-count, or motion data are collected by the public V1 app.</li>
+  <li><strong>Wake-up quiz results</strong> — Quiz style (math, picture identification, or pattern), difficulty, completion/pass status, timestamps, and responses needed to run and evaluate the check. No photos, location, step-count, or motion data are collected by the original iPhone app.</li>
 </ul>
 
 <h3>Audio Data</h3>
 <ul>
-  <li><strong>Voice alarm recordings</strong> — Guardians may optionally record a personal wake-up message attached to an alarm. The Android app cannot record them yet. The audio is stored in our Firestore database (or Firebase Storage in the original iPhone app), scoped to the family, encrypted in transit (TLS) and at rest, and readable only by members of that family.</li>
-  <li><strong>Voice messages</strong> — On iPhone and iPad, guardians and children may optionally send each other short voice messages (up to 30 seconds, ~120&nbsp;KB); the Android app cannot record them yet. They are stored in our Firestore database (or Firebase Storage in the original iPhone app), scoped to the family, encrypted in transit (TLS) and at rest, readable only by members of that family, and deleted when the recipient dismisses them.</li>
+  <li><strong>Voice alarm recordings</strong> — Guardians may optionally record a personal wake-up message attached to an alarm. The audio is stored in our Firestore database (or Firebase Storage in the original iPhone app), scoped to the family, encrypted in transit (TLS) and at rest, and readable only by members of that family.</li>
+  <li><strong>Voice messages</strong> — On iPhone and iPad, a guardian may record a short voice message (up to 30 seconds, ~120&nbsp;KB) for one of a child&rsquo;s mornings; the Android app cannot record them yet. In the original iPhone app, guardians and children can send each other voice messages. They are stored in our Firestore database (or Firebase Storage in the original iPhone app), scoped to the family, encrypted in transit (TLS) and at rest, and readable only by members of that family. How long they are kept is under Data Retention.</li>
 </ul>
 
 <h3>Website, Waitlist, and Email Data</h3>
@@ -73,7 +73,7 @@
 
 <h3>Location Data</h3>
 <ul>
-  <li><strong>None.</strong> v1.0 does not request or collect any location data. The geofence verification method is scoped out of this release.</li>
+  <li><strong>None.</strong> None of the apps request or collect any location data.</li>
 </ul>
 
 <h3>Photo Data</h3>
@@ -93,7 +93,7 @@
 <h2>Data the App Does NOT Collect</h2>
 <ul>
   <li>Date of birth (we use age only, grouped into age bands)</li>
-  <li>Any location data — coarse, precise, or distance-only (geofence verification scoped out of v1.0)</li>
+  <li>Any location data — coarse, precise, or distance-only</li>
   <li>Photographs. A wake-check photo is classified on the device and discarded; no image is uploaded or stored</li>
   <li>Step counts or motion data. The new iPhone and iPad app and the Android app read the motion sensor only during the shake wake game, on the device; the readings are not stored or sent.</li>
   <li>Browsing history</li>
@@ -111,7 +111,7 @@
   <li><strong>Minimal collection:</strong> We collect only the child's name and age from the guardian. During an active alarm check, the child's device collects the responses and result needed for the selected math, picture-identification, or pattern quiz.</li>
   <li><strong>No advertising:</strong> We do not serve ads to children or use children's data for advertising.</li>
   <li><strong>No social features:</strong> Children cannot communicate with anyone other than their guardian through the app.</li>
-  <li><strong>Guardian control:</strong> Guardians can view and modify all child data, and can delete it in the app or ask us to delete it (see Your Rights). Deleting the guardian account in the app deletes the family and every child&rsquo;s profile; our <a href="delete-account.html">account deletion page</a> lists everything it deletes and the records only an email request removes.</li>
+  <li><strong>Guardian control:</strong> Guardians can view and modify all child data, and can delete it in the app or ask us to delete it (see Your Rights). Deleting the guardian account in the app deletes every child&rsquo;s profile; our <a href="delete-account.html">account deletion page</a> lists what else it deletes in the iPhone, iPad and Android apps, and the records only an email request removes.</li>
 </ul>
 
 <h2>How We Use Data</h2>
@@ -141,13 +141,13 @@
   <li><strong>Active accounts:</strong> Data is retained while the account is active.</li>
   <li><strong>Session history:</strong> In the original iPhone app, limited to the most recent 500 sessions per child (older sessions are automatically deleted by a Cloud Function).</li>
   <li><strong>Tamper events:</strong> In the original iPhone app, limited to the most recent 2,000 events per child.</li>
-  <li><strong>Account deletion:</strong> Deleting the account in the iPhone, iPad or Android app permanently deletes the family data listed on our <a href="delete-account.html">account deletion page</a>, which also lists the records only an email request removes. In the original iPhone app, Delete Account removes the family&rsquo;s child profiles, sessions, tamper events, voice recordings, push logs and join codes; email us to remove anything it leaves (see Your Rights). Deletion cannot be undone.</li>
+  <li><strong>Account deletion:</strong> Deleting the account in the iPhone, iPad or Android app permanently deletes the family data listed on our <a href="delete-account.html">account deletion page</a>, which also lists the records only an email request removes. In the original iPhone app, Delete Account deletes your children&rsquo;s profiles but not all of the family&rsquo;s data; email us and we delete the rest (see Your Rights). Deletion cannot be undone.</li>
   <li><strong>Email lists:</strong> Waitlist and product-update data are retained until you unsubscribe, the list is retired, or you request deletion, subject to limited records needed to document consent, suppression, security, or legal obligations.</li>
-  <li><strong>Voice recordings:</strong> A wake-up message attached to an alarm is kept until the guardian replaces or removes it, or the alarm is deleted. A message recorded for one particular morning expires after that morning and is deleted automatically.</li>
+  <li><strong>Voice recordings:</strong> In the iPhone, iPad and Android apps, a wake-up message attached to an alarm is kept until the guardian replaces or removes it, or the alarm is deleted, and a message recorded for one particular morning is deleted automatically after that morning. In the original iPhone app, a child&rsquo;s voice message is deleted after 72 hours; other recordings are kept until a new recording replaces them or you ask us to delete them (see Your Rights).</li>
   <li><strong>Analytics events:</strong> Analytics events linked to your family: deleting the account in the iPhone, iPad or Android app does not remove them; we delete them when you ask us by email (see Your Rights). Google Analytics data collected by the original iPhone app and the Android app is not linked to your account and cannot be deleted per family; Google keeps event-level data for the retention period set in our Analytics property.</li>
   <li><strong>Diagnostics:</strong> Feedback and diagnostic reports you choose to send are kept until you ask us to delete them; we do not yet delete them automatically.</li>
   <li><strong>Backups:</strong> Retained for seven days. Data deleted from the live database is removed from backups as those backups age out, within that window.</li>
-  <li><strong>Children&rsquo;s data:</strong> We keep a child&rsquo;s data no longer than is reasonably necessary for the purpose it was collected for, and delete it when that purpose is fulfilled or the account is deleted.</li>
+  <li><strong>Children&rsquo;s data:</strong> We keep a child&rsquo;s data no longer than is reasonably necessary for the purpose it was collected for, and delete it when that purpose is fulfilled. Deleting the account in the app deletes the child&rsquo;s profile at once; our <a href="delete-account.html">account deletion page</a> lists what else it deletes, and we delete the rest when you ask by email (see Your Rights).</li>
 </ul>
 
 <h2>Data Sharing</h2>
@@ -163,7 +163,7 @@
 <ul>
   <li><strong>Access:</strong> See your children, alarms and recent mornings in the app; the original iPhone app also has History and Diagnostics screens. Email us for a copy of anything else.</li>
   <li><strong>Correction:</strong> Edit child profiles and alarm settings at any time.</li>
-  <li><strong>Deletion:</strong> A guardian can delete the family&rsquo;s data in the app, or ask us to delete it by email. Our <a href="delete-account.html">account deletion page</a> shows where the controls are in each app, what each one deletes, and how to ask us. In the original iPhone app, use Settings &gt; Delete Account.</li>
+  <li><strong>Deletion:</strong> A guardian can delete the family&rsquo;s data in the app, or ask us to delete it by email. Our <a href="delete-account.html">account deletion page</a> shows where the controls are in each app, what each one deletes, and how to ask us. In the original iPhone app, Settings &gt; Delete Account deletes your children&rsquo;s profiles but not all of the family&rsquo;s data; email us and we delete the rest.</li>
   <li><strong>Data portability:</strong> Contact us to request an export of your data.</li>
   <li><strong>Email choices:</strong> Unsubscribe using the link in an email or contact us to request access, correction, or deletion of waitlist and product-update data.</li>
 </ul>
