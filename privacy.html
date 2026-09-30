@@ -54,7 +54,7 @@
 <ul>
   <li><strong>Alarm schedules</strong> — Wake-up times, active days, verification settings. Stored in Firestore and locally on-device.</li>
   <li><strong>Morning sessions</strong> — Records of each alarm event: when it fired, verification method used, whether it was approved, points earned. Stored in Firestore.</li>
-  <li><strong>Wake-up quiz results</strong> — Quiz style (math, picture identification, or pattern), difficulty, completion/pass status, timestamps, and responses needed to run and evaluate the check. No photos, location, step-count, or motion data are collected by the original iPhone app.</li>
+  <li><strong>Wake-up check results</strong> — The kind of check (such as a math, picture or pattern quiz, a tap, or a QR code scan), its difficulty, whether it passed, timestamps, and the responses needed to run and evaluate it. No photos, location, step-count, or motion data are collected by the original iPhone app.</li>
 </ul>
 
 <h3>Audio Data</h3>
@@ -121,7 +121,7 @@
   <li>Delivering alarms and verification challenges</li>
   <li>Calculating streaks, points, and rewards</li>
   <li>Sending push notifications to guardians about verification status</li>
-  <li>Tailoring quiz difficulty and wording based on the child's age group</li>
+  <li>Tailoring wake-up check difficulty and wording to the child's age</li>
   <li>Detecting and reporting tampering (e.g., device volume changes, permission revocation)</li>
   <li>Providing diagnostic information for support</li>
 </ul>
