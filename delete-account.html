@@ -30,7 +30,27 @@
 <h1>Delete your Mom Alarm Clock account</h1>
 <p class="meta">For the iPhone, iPad and Android apps</p>
 
-<p>Google Play and the App Store require a way to request account deletion outside the app. If your app has Settings &gt; Delete Account, use it. If it does not (the current test versions on iPhone, iPad and Android), request deletion on this page.</p>
+<p>Google Play and the App Store require a way to request account deletion outside the app. This page describes what the Android app deletes by itself, and how to ask us to delete anything else.</p>
+<!-- NEEDS-IOS-CONFIRM --><p>The current test versions on iPhone and iPad: request deletion by email, as described below.</p><!-- /NEEDS-IOS-CONFIRM -->
+
+<h2>In the Android app</h2>
+<p>These controls are on the parent&rsquo;s phone. Android has no sign-in email; the account is tied to the phone the app is installed on.</p>
+<ul>
+  <li><strong>Delete alarm</strong> (on each alarm): the alarm is turned off, and the app waits until the child&rsquo;s phone confirms the alarm is gone. Only then are the alarm and its morning history deleted. If the alarm changed in the meantime, nothing is deleted and the app says &ldquo;Couldn&rsquo;t remove &mdash; the alarm changed; delete it again.&rdquo;</li>
+  <li><strong>Remove</strong> (on each child): every alarm of that child is turned off, and the app waits until the child&rsquo;s phone confirms the alarms are gone. Then the child&rsquo;s profile, alarms, morning history, tamper events and reward redemptions are deleted. The child&rsquo;s Android phone then resets itself and shows &ldquo;This phone was removed from the family.&rdquo;</li>
+  <li><strong>Delete account and all data</strong> (in Account, at the bottom of the parent&rsquo;s home screen): deletes the family, every child&rsquo;s profile, all alarms, morning history, tamper events, rewards, reward redemptions and recorded voice messages, then deletes the sign-in account. It is not available while an alarm is going off or a wake-up check is open on that phone. It turns off alarms on the parent&rsquo;s phone only; alarms already set on other phones may still ring until those phones find the family gone. A child&rsquo;s Android phone then resets itself and shows &ldquo;This phone was removed from the family.&rdquo;</li>
+  <li><strong>Remove this device</strong> (on a child&rsquo;s phone): stops alarms on that phone. It does not delete the family&rsquo;s data.</li>
+</ul>
+<!-- NEEDS-IOS-CONFIRM --><p>If a child uses an iPhone or iPad, that device also turns off removed alarms before anything is deleted, and resets itself when the child or the family is removed.</p><!-- /NEEDS-IOS-CONFIRM -->
+
+<h2>What the Android app does not delete</h2>
+<p>To have these deleted, email us as described below.</p>
+<ul>
+  <li><strong>After Remove:</strong> the records of which phone holds each alarm, the child&rsquo;s alarm-removal records, the family&rsquo;s recorded voice messages, and the record of the removal itself.</li>
+  <li><strong>After Delete alarm:</strong> the records of which phone holds the alarm, the alarm-removal records and the record of the removal itself.</li>
+  <li><strong>After Delete account and all data:</strong> each phone&rsquo;s membership record (the family it belonged to, its role, and its notification token if one was saved), the records of which phone holds each alarm, the family&rsquo;s alarm-removal records, the records of earlier removals, and join codes.</li>
+</ul>
+<!-- NEEDS-IOS-CONFIRM --><p>If an iPhone or iPad is in the family, its bedtime settings, message settings and morning voice messages are also not deleted by the Android app.</p><!-- /NEEDS-IOS-CONFIRM -->
 
 <h2>How to request deletion</h2>
 <div class="contact">
@@ -54,7 +74,7 @@
 </ul>
 
 <h2>What is deleted</h2>
-<p>The family&rsquo;s data includes:</p>
+<p>When we delete a family on request, the family&rsquo;s data includes:</p>
 <ul>
   <li>The parent and child profiles</li>
   <li>Alarms and morning sessions</li>
@@ -74,7 +94,7 @@
 </ul>
 
 <h2>When it happens</h2>
-<p>We complete deletion within 30 days of confirming the request, and reply to tell you it is done.</p>
+<p>For a request by email, we complete deletion within 30 days of confirming the request, and reply to tell you it is done.</p>
 
 <h2>More information</h2>
 <p>See the <a href="privacy.html">Privacy Policy</a> and <a href="support.html">Support</a>.</p>
