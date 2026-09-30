@@ -29,7 +29,7 @@
 <body>
 
 <h1>Mom Alarm Clock — Privacy Policy</h1>
-<p class="meta"><strong>Last updated:</strong> September 28, 2026</p>
+<p class="meta"><strong>Last updated:</strong> September 30, 2026</p>
 
 <p>Mom Alarm Clock is a family alarm and morning routine app designed for guardians (a parent or legal guardian) and children (ages 5–18). This policy covers the Mom Alarm Clock mobile app (&ldquo;the App&rdquo;), our website, and email update or waitlist forms that link to this policy. It explains what data we collect, why, and how we protect it.</p>
 
@@ -111,7 +111,7 @@
   <li><strong>Minimal collection:</strong> We collect only the child's name and age from the guardian. During an active alarm check, the child's device collects the responses and result needed for the selected math, picture-identification, or pattern quiz.</li>
   <li><strong>No advertising:</strong> We do not serve ads to children or use children's data for advertising.</li>
   <li><strong>No social features:</strong> Children cannot communicate with anyone other than their guardian through the app.</li>
-  <li><strong>Guardian control:</strong> Guardians can view and modify all child data, and can request deletion of all child data (see Your Rights). Deleting the guardian account deletes all family data including all child profiles.</li>
+  <li><strong>Guardian control:</strong> Guardians can view and modify all child data, and can delete it in the app or ask us to delete it (see Your Rights). Deleting the guardian account in the app deletes the family and every child&rsquo;s profile; our <a href="delete-account.html">account deletion page</a> lists everything it deletes and the records only an email request removes.</li>
 </ul>
 
 <h2>How We Use Data</h2>
@@ -132,7 +132,7 @@
   <li><strong>On-device:</strong> On iPhone and iPad, local data is kept in the app's private container and encrypted by iOS Data Protection. On Android, local app data is kept in the app's private storage, which other apps cannot read; it is encrypted when the device's storage encryption is on, which is standard on devices that shipped with Android 10 or later.</li>
   <li><strong>App Check:</strong> In the original iPhone app, Firebase App Check with App Attest verifies that requests come from legitimate app installations.</li>
   <li><strong>Access control:</strong> Firestore security rules enforce family isolation — a person can only reach data inside their own family. A child&rsquo;s device can update its own morning and its own reports, and nothing else: the fields that decide whether and when a guardian is alerted are writable only by our servers and by a guardian, so a child&rsquo;s device cannot silence an alert about itself. Rules changes are checked against an automated test suite before they are deployed.</li>
-  <li><strong>Our practices:</strong> Access to production data is limited to the operator of the service and protected by two-factor authentication. Data is backed up daily with a seven-day retention window, and the database supports point-in-time recovery over the same window. We review the app&rsquo;s data handling before each release. We do not sell data and we do not use it for advertising.</li>
+  <li><strong>Our practices:</strong> Access to production data is limited to the operator of the service and protected by two-factor authentication. Data from the iPhone, iPad and Android apps is backed up daily with a seven-day retention window, and that database supports point-in-time recovery over the same window. The original iPhone app&rsquo;s database has no scheduled backups. We review the app&rsquo;s data handling before each release. We do not sell data and we do not use it for advertising.</li>
   <li><strong>Breach notification:</strong> If we become aware of a breach affecting personal data, we will notify affected guardians by email where we have an address, and otherwise through the app, and any regulator required by law, without undue delay.</li>
 </ul>
 
@@ -141,10 +141,10 @@
   <li><strong>Active accounts:</strong> Data is retained while the account is active.</li>
   <li><strong>Session history:</strong> In the original iPhone app, limited to the most recent 500 sessions per child (older sessions are automatically deleted by a Cloud Function).</li>
   <li><strong>Tamper events:</strong> In the original iPhone app, limited to the most recent 2,000 events per child.</li>
-  <li><strong>Account deletion:</strong> When an account is deleted (see Your Rights), all family data is permanently deleted: child profiles, sessions, tamper events, voice recordings, push logs, and join codes. This action is irreversible.</li>
+  <li><strong>Account deletion:</strong> Deleting the account in the iPhone, iPad or Android app permanently deletes the family data listed on our <a href="delete-account.html">account deletion page</a>, which also lists the records only an email request removes. In the original iPhone app, Delete Account removes the family&rsquo;s child profiles, sessions, tamper events, voice recordings, push logs and join codes; email us to remove anything it leaves (see Your Rights). Deletion cannot be undone.</li>
   <li><strong>Email lists:</strong> Waitlist and product-update data are retained until you unsubscribe, the list is retired, or you request deletion, subject to limited records needed to document consent, suppression, security, or legal obligations.</li>
   <li><strong>Voice recordings:</strong> A wake-up message attached to an alarm is kept until the guardian replaces or removes it, or the alarm is deleted. A message recorded for one particular morning expires after that morning and is deleted automatically.</li>
-  <li><strong>Analytics events:</strong> Analytics events linked to your family are deleted when the account is deleted. Google Analytics data collected by the original iPhone app and the Android app is not linked to your account and cannot be deleted per family; Google keeps event-level data for the retention period set in our Analytics property.</li>
+  <li><strong>Analytics events:</strong> Analytics events linked to your family: deleting the account in the iPhone, iPad or Android app does not remove them; we delete them when you ask us by email (see Your Rights). Google Analytics data collected by the original iPhone app and the Android app is not linked to your account and cannot be deleted per family; Google keeps event-level data for the retention period set in our Analytics property.</li>
   <li><strong>Diagnostics:</strong> Feedback and diagnostic reports you choose to send are kept until you ask us to delete them; we do not yet delete them automatically.</li>
   <li><strong>Backups:</strong> Retained for seven days. Data deleted from the live database is removed from backups as those backups age out, within that window.</li>
   <li><strong>Children&rsquo;s data:</strong> We keep a child&rsquo;s data no longer than is reasonably necessary for the purpose it was collected for, and delete it when that purpose is fulfilled or the account is deleted.</li>
@@ -163,7 +163,7 @@
 <ul>
   <li><strong>Access:</strong> See your children, alarms and recent mornings in the app; the original iPhone app also has History and Diagnostics screens. Email us for a copy of anything else.</li>
   <li><strong>Correction:</strong> Edit child profiles and alarm settings at any time.</li>
-  <li><strong>Deletion:</strong> If your app has Settings &gt; Delete Account, use it. If it does not (the current test versions on iPhone, iPad and Android), request deletion on <a href="delete-account.html">this page</a>.</li>
+  <li><strong>Deletion:</strong> A guardian can delete the family&rsquo;s data in the app, or ask us to delete it by email. Our <a href="delete-account.html">account deletion page</a> shows where the controls are in each app, what each one deletes, and how to ask us. In the original iPhone app, use Settings &gt; Delete Account.</li>
   <li><strong>Data portability:</strong> Contact us to request an export of your data.</li>
   <li><strong>Email choices:</strong> Unsubscribe using the link in an email or contact us to request access, correction, or deletion of waitlist and product-update data.</li>
 </ul>
