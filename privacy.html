@@ -80,7 +80,7 @@
 
 <h3>Photo Data</h3>
 <ul>
-  <li><strong>Camera</strong> — In the new iPhone and iPad app and the Android app, requested on the child&rsquo;s device for three optional features: scanning a family QR code to join, the QR wake check, and the photograph wake check. The original iPhone app does not use the camera. A photograph taken for a wake check is classified on the device (by Apple&rsquo;s Vision framework on iPhone and iPad, and on Android by a Google ML Kit image-labeling model that ships inside the app) and then discarded — never uploaded, never saved, never shown to the guardian; only whether the requested object was recognised is recorded. The app does not request photo-library access.</li>
+  <li><strong>Camera</strong> — In the new iPhone and iPad app and the Android app, requested on the child&rsquo;s device for two optional features: scanning a family QR code to join, and the QR wake check; in the new iPhone and iPad app, also the photograph wake check (the Android app does not offer a photograph wake check). The original iPhone app does not use the camera. A photograph taken for a wake check is classified on the device by Apple&rsquo;s Vision framework and then discarded — never uploaded, never saved, never shown to the guardian; only whether the requested object was recognised is recorded. The app does not request photo-library access.</li>
 </ul>
 
 <h3>Device and Diagnostic Data</h3>
@@ -158,7 +158,7 @@
   <li><strong>Google Firebase</strong> — Cloud infrastructure provider (data processing agreement in place)</li>
   <li><strong>Apple Push Notification service (APNs)</strong> — For delivering push notifications on iPhone and iPad</li>
   <li><strong>Firebase Cloud Messaging</strong> — For delivering push notifications on Android, and for routing notifications to Apple&rsquo;s push service on iPhone and iPad</li>
-  <li><strong>Google ML Kit</strong> — On Android, reads QR codes and recognises objects in a wake-check photograph, on the phone, during a wake-up check; the photograph never leaves the phone, and Google receives metrics about how these features perform</li>
+  <li><strong>Google ML Kit</strong> — On Android, reads QR codes on the phone during a wake-up check; Google receives metrics about how the scanning feature performs</li>
   <li><strong>Kit</strong> — Email form, confirmation, list-management, and product-update delivery provider for adults who choose to subscribe</li>
 </ul>
 
